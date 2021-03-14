@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PrefabScript : MonoBehaviour
 {
@@ -15,10 +16,20 @@ public class PrefabScript : MonoBehaviour
     {
         if (!GetComponent<Renderer>().isVisible)
         {
-            int count = GameObject.FindGameObjectsWithTag("Item").Length;
-            Debug.Log(count);
+            // スコア保存
+            int now_score = GameObject.FindGameObjectsWithTag("Item").Length;
+            PlayerPrefs.SetInt("NOW_SCORE", now_score);
+            PlayerPrefs.Save();
 
-            Destroy(this.gameObject);
+            // ハイスコアの保存
+            int high_score = PlayerPrefs.GetInt("HIGH_SCORE", 0);
+            if (high_score < now_score) {
+                PlayerPrefs.SetInt("HIGH_SCORE", now_score);
+                PlayerPrefs.Save();
+            }
+
+            // スコアシーンへ移動
+            SceneManager.LoadScene("ScoreScene");
         }
     }
 }
