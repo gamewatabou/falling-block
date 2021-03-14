@@ -483,8 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f5b932db74f4565b8eeae52f273c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab1: {fileID: 4177055416871782787, guid: 46eabe43495014a63ab2968888b428e6, type: 3}
-  Prefab2: {fileID: 7331259378265453465, guid: 124204a5e6aa04187b928daa7fb563f0, type: 3}
+  Prefab1: {fileID: 6755318132233537407, guid: 0fbe4467a024143ac978889e662e73ed, type: 3}
+  Prefab2: {fileID: 7793081681763568190, guid: 670b3846e679c4f3eb378814c240d88c, type: 3}
 --- !u!4 &1319284483
 Transform:
   m_ObjectHideFlags: 0
